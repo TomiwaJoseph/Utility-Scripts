@@ -22,6 +22,8 @@ Example command line snippet:
 ```
 PS C:\Users\Python Scripts> python word_finder.py pnhoty 6
 ['phyton', 'python', 'typhon']
+PS C:\Users\Python Scripts> python word_finder.py pnhoty 4
+['hypo', 'phon', 'phot', 'pony', 'tony', 'toph', 'typo']
 ```
 
 ## No. 3 -> Renamer
@@ -38,13 +40,13 @@ PS C:\Users\Python Scripts> python renamer.py C:\Users\somebadpath
 Folder path does not exist
 ```
 
-## No. 4 -> Subtitle Adder
+## No. 4 -> Subtitle Renamer
 
 VLC has this beautiful feature that automatically finds the subtitle for a video so long as the subtitle name is the same as the video name (excluding the extension). When I download subtitles for a series, I don't want to have to drag subtitles for each episode so I wrote this script. I just copy the subtitles into the video folder and run this script. All I need do next is press play all 😎😎
 
 Example command line snippet:
 
 ```
-PS C:\Users\Python Scripts> python subtitle_adder.py C:\Users\videofolderpath
+PS C:\Users\Python Scripts> python subtitle_renamer.py C:\Users\videofolderpath
 Subtitles renamed. Enjoy 😀
 ```
