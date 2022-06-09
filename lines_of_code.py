@@ -4,7 +4,7 @@ import os
 # Filenames to avoid
 folder_names_to_avoid = [
     '__pycache__', 'migrations', 'font-awesome', 'images', 'bootstrap',
-    'media', 'project_screenshot', 'fontawesome-free', 'fonts',
+    'media', 'project_screenshot', 'fontawesome-free', 'fonts', 'image',
     'screenshots', 'log_images', '.git', 'img', 'fontawesome-free-5.14.0-web'
 ]
 
@@ -21,7 +21,7 @@ files_to_avoid = [
 
 bad_extensions = [
     '.mp4', '.png', '.jpg', '.wav', '.mp3', '.txt', '.sqlite3', '.db', '.gif',
-    '.json', '.iml', '.key'
+    '.json', '.iml', '.key', '.pdf', '.doc', '.cdr', '.xlm'
 ]
 
 # Using SYS
@@ -31,7 +31,6 @@ def count_lines():
     try:
         folder_path = sys.argv[1]
         if folder_path == '--help':
-            print()
             print('#------------------------------#')
             print()
             print('Enter python loc.py folder-path')
@@ -42,6 +41,7 @@ def count_lines():
             return
         if len(sys.argv) > 1:
             folder_path = ' '.join(sys.argv[1:])
+            
         lines_of_code = 0
 
         # check if path exists
@@ -71,9 +71,16 @@ def count_lines():
             print()
             print('#------------------------------#')
             print()
-            
     except IndexError:
+        print()
         print('No folder path specified')
+        print('#------------------------------#')
+        print()
+        print('Enter python loc.py folder-path')
+        print(r'Eg. python loc.py C:\Users\Folder')
+        print()
+        print('#------------------------------#')
+        print()
     
 
 if __name__ == '__main__':

@@ -4,6 +4,15 @@ import sys
 def rename():
     try:
         folder_path = sys.argv[1]
+        if folder_path == '--help':
+            print('#------------------------------#')
+            print()
+            print('Enter python renamer.py folder-path')
+            print(r'Eg. python renamer.py C:\Users\Folder')
+            print()
+            print('#------------------------------#')
+            print()
+            return
         if len(sys.argv) > 1:
             folder_path = ' '.join(sys.argv[1:])
         
@@ -23,7 +32,15 @@ def rename():
         else:
             print('Folder path does not exist')
     except IndexError:
+        print()
         print('No folder path specified')
+        print('#------------------------------#')
+        print()
+        print('Enter python renamer.py folder-path')
+        print(r'Eg. python renamer.py C:\Users\Folder')
+        print()
+        print('#------------------------------#')
+        print()
 
 
 if __name__ == "__main__":
